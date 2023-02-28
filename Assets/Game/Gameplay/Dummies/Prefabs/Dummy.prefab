@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7724971019160513396}
   - component: {fileID: 6135395567679142663}
   - component: {fileID: 8369815931574409127}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3327268931799332959}
   - component: {fileID: 4106076278628224321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: '[CONFIG]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 9069683181603709104}
   - component: {fileID: 3798458173027506333}
   - component: {fileID: 4851069363177572952}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4160743935777532418}
   - component: {fileID: 2964130366031754862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: '[COMPONENTS]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4160743936384362823}
   - component: {fileID: 8104232569065797682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: '[CORE]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4160743936672484588}
   - component: {fileID: 1513282004539278519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: '[VISUAL]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 4517496673781899298}
   - component: {fileID: 4142271853319527612}
   - component: {fileID: 1213308254687232640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8334866056549154424}
   - component: {fileID: 4719485714556548037}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: '[COLLISION]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5991113872971464344}
   - component: {fileID: 7220185871052254578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: '[UI]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2946148372981534579}
   - component: {fileID: 8599667475965430153}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,6 +548,10 @@ PrefabInstance:
     - target: {fileID: 1212770861226662, guid: 5037be3324f8a0c4a8aa6184a0560d33, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Dummy_Armour_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1212770861226662, guid: 5037be3324f8a0c4a8aa6184a0560d33, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4840805334924898, guid: 5037be3324f8a0c4a8aa6184a0560d33, type: 3}
       propertyPath: m_RootOrder
@@ -630,6 +634,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HitPointsBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118425123308004364, guid: 2ed454dd731c84a7ab7f8e578337dd46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4118425123308004367, guid: 2ed454dd731c84a7ab7f8e578337dd46,
         type: 3}
@@ -735,6 +744,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118425123748754498, guid: 2ed454dd731c84a7ab7f8e578337dd46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518245685166606590, guid: 2ed454dd731c84a7ab7f8e578337dd46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ed454dd731c84a7ab7f8e578337dd46, type: 3}
