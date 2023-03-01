@@ -321,7 +321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &846427038
 Transform:
   m_ObjectHideFlags: 0
@@ -705,9 +705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1241457493}
-  - component: {fileID: 1241457496}
   - component: {fileID: 1241457494}
-  - component: {fileID: 1241457495}
   m_Layer: 0
   m_Name: '[AGENTS]'
   m_TagString: Untagged
@@ -739,7 +737,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1241457492}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6dd597c86b647449593a011e7116383, type: 3}
+  m_Script: {fileID: 11500000, guid: 80313534f11cc3b45b860cd65f81a92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -751,50 +749,14 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
---- !u!114 &1241457495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241457492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d4b175279bd4e3d8d81f738d4e442fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
---- !u!114 &1241457496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241457492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db80cfa6473b4506a8a963250d04aed3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  moveAgent: {fileID: 1241457494}
-  meleeCombatAgent: {fileID: 1241457495}
+  _currentPath:
+  - {fileID: 920218096}
+  - {fileID: 166479057}
+  - {fileID: 66034502}
+  - {fileID: 1447091523}
+  - {fileID: 1673238069}
+  _delayInPoint: 2
+  _stoppingDistance: 0.1
 --- !u!1001 &1242631489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -994,13 +956,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527775072}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3fc427dab9f477db11e7af594a31205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sensor: {fileID: 1527775074}
-  attackAgent: {fileID: 1241457496}
+  attackAgent: {fileID: 0}
 --- !u!1 &1673238068
 GameObject:
   m_ObjectHideFlags: 0
