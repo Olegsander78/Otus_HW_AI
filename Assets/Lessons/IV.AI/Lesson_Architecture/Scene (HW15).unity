@@ -749,13 +749,8 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  _currentPath:
-  - {fileID: 920218096}
-  - {fileID: 166479057}
-  - {fileID: 66034502}
-  - {fileID: 1447091523}
-  - {fileID: 1673238069}
-  _delayInPoint: 2
+  _pathPoints: {fileID: 1713576125}
+  _delayInPoint: 1
   _stoppingDistance: 0.1
 --- !u!1001 &1242631489
 PrefabInstance:
@@ -1044,7 +1039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawGizmos: 1
-  loop: 0
+  loop: 1
   color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1892567287
 GameObject:
