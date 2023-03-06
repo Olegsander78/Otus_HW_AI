@@ -82,7 +82,7 @@ namespace Lessons.AI.Lesson_Architecture
                     var unitPosition = this.unitComponent.Position;
                     var targetPosition = this.targetComponent.Position;
                     
-                    this.moveAgent.SetTargetPosiiton(targetPosition);
+                    this.moveAgent.SetTargetPosition(targetPosition);
                     this.UpdateState(unitPosition, targetPosition);
                 }
                 else

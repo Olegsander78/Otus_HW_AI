@@ -9,36 +9,46 @@ namespace Lessons.AI.Lesson_Architecture
     public sealed class MoveAgent : Agent
     {
         [ShowInInspector, ReadOnly]
+        public bool IsPositionReached
+        {
+            get { return this.isPositionReached; }
+        }
+
+        [ShowInInspector, ReadOnly]
         private IEntity unit;
 
         [ShowInInspector, ReadOnly]
-        private float stoppingDistance;
+        private float stoppingDistanceSqr;
 
         [ShowInInspector, ReadOnly]
-        private Vector3 targetPosiiton;
+        private Vector3 targetPosition;
 
         private IComponent_GetPosition positionComponent;
 
         private IComponent_MoveInDirection moveComponent;
-        
+
         private Coroutine moveCoroutine;
 
+        private bool isPositionReached;
+
         [Button]
-        public void SetTargetPosiiton(Transform point)
+        public void SetTargetPosition(Transform point)
         {
-            this.targetPosiiton = point.position;
+            this.targetPosition = point.position;
+            //this.isPositionReached = false;
         }
 
         [Button]
-        public void SetTargetPosiiton(Vector3 position)
+        public void SetTargetPosition(Vector3 position)
         {
-            this.targetPosiiton = position;
+            this.targetPosition = position;
+            //this.isPositionReached = false;
         }
 
         [Button]
         public void SetStoppingDistance(float stoppingDistance)
         {
-            this.stoppingDistance = stoppingDistance;
+            this.stoppingDistanceSqr = stoppingDistance * stoppingDistance;
         }
 
         [Button]
@@ -73,7 +83,7 @@ namespace Lessons.AI.Lesson_Architecture
                 {
                     this.DoMove();
                 }
-                
+
                 yield return period;
             }
         }
@@ -81,17 +91,12 @@ namespace Lessons.AI.Lesson_Architecture
         private void DoMove()
         {
             var myPosition = this.positionComponent.Position;
-            var distanceVector = this.targetPosiiton - myPosition;
+            var distanceVector = this.targetPosition - myPosition;
 
-            var isReached = distanceVector.sqrMagnitude <= this.stoppingDistance * this.stoppingDistance;
-            if (!isReached)
+            this.isPositionReached = distanceVector.sqrMagnitude <= this.stoppingDistanceSqr;
+            if (!this.isPositionReached)
             {
-                var moveDirection = distanceVector.normalized;
-                this.moveComponent.Move(moveDirection);
-            }
-            else
-            {
-                Debug.Log("Position Reached");
+                this.moveComponent.Move(distanceVector.normalized);
             }
         }
     }
