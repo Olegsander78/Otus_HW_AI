@@ -16,11 +16,11 @@ namespace Lessons.AI.Lesson_Architecture
         [SerializeField]
         private MoveAgent _moveAgent;
 
-        [ShowInInspector, ReadOnly]
+        [SerializeField]
         private List<Vector3> _currentPath;
 
-        [SerializeField]
-        private WaypointsPath _pathPoints;
+        //[SerializeField]
+        //private WaypointsPath _pathPoints;
 
         [SerializeField]
         private bool _isLooping;
@@ -39,7 +39,7 @@ namespace Lessons.AI.Lesson_Architecture
         [Button]
         public void SetPath()
         {            
-            _currentPath = _pathPoints.GetPositionPoints();
+            //_currentPath = _pathPoints.GetPositionPoints();
             _waypointIterator = _currentPath.GetEnumerator();
             _waypointIterator.MoveNext();
             foreach (var item in _currentPath)

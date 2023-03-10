@@ -772,7 +772,11 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _moveAgent: {fileID: 1241457494}
-  _pathPoints: {fileID: 1713576125}
+  _currentPath:
+  - {x: 4, y: 0, z: -4}
+  - {x: 4, y: 0, z: 4}
+  - {x: -4, y: 0, z: 4}
+  - {x: -4, y: 0, z: -4}
   _isLooping: 1
   _delayInPoint: 1
   _stoppingDistance: 0.1
@@ -930,7 +934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1527775073
 Transform:
   m_ObjectHideFlags: 0
@@ -998,7 +1002,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1713576124
 Transform:
   m_ObjectHideFlags: 0
