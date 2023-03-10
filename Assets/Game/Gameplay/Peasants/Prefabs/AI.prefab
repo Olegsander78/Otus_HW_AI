@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0df5a7da98c84df0b11431548fea63e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskRunner: {fileID: 813584958930675051}
+  commandExecutor: {fileID: 0}
 --- !u!1 &813584958979735447
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9deb5231dab42bcba32c7a3dec3c64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  root: {fileID: 813584958979735444}
+  root: {fileID: 0}
   movePositionKey: MovePosition
 --- !u!114 &813584958979735444
 MonoBehaviour:
@@ -218,14 +218,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 813584958979735447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42429265010d4ef996259e2aad7e1899, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b316e6f5b15347fab78b21d333b5417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stoppingDistance:
-    mode: 2
-    baseValue: 0
+    mode: 0
+    baseValue: 0.2
     monoValue: {fileID: 0}
-    scriptableValue: {fileID: 11400000, guid: d8730ac04cfbb4c65b5600628fca49c4, type: 2}
+    scriptableValue: {fileID: 0}
   unitKey: Unit
   movePositionKey: MovePosition
 --- !u!1 &813584959072671372
@@ -370,16 +370,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 813584959700463907}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42429265010d4ef996259e2aad7e1899, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ead9967e1494b9dbfc512c61a58bac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stoppingDistance:
-    mode: 2
-    baseValue: 0
+    mode: 0
+    baseValue: 0.5
     monoValue: {fileID: 0}
-    scriptableValue: {fileID: 11400000, guid: 13ec9eb8bc85c4f5e8def90a011ddefc, type: 2}
+    scriptableValue: {fileID: 0}
   unitKey: Unit
-  movePositionKey: MovePosition
+  targetKey: Resource
 --- !u!1 &813584959835172918
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,14 +813,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2956146718463781100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42429265010d4ef996259e2aad7e1899, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b316e6f5b15347fab78b21d333b5417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stoppingDistance:
-    mode: 2
+    mode: 0
     baseValue: 0
     monoValue: {fileID: 0}
-    scriptableValue: {fileID: 11400000, guid: d8730ac04cfbb4c65b5600628fca49c4, type: 2}
+    scriptableValue: {fileID: 0}
   unitKey: Unit
   movePositionKey: MovePosition
 --- !u!1 &2956146718624476335
@@ -913,13 +913,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 291ce9db14b9412fbfd14266280ed08f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoppingDistance:
-    mode: 2
-    baseValue: 0
-    monoValue: {fileID: 0}
-    scriptableValue: {fileID: 11400000, guid: 8c8d74c8dd1b6425aa6438709970a3a4, type: 2}
   unitKey: Unit
   targetKey: Target
+  stoppingDistanceKey: Target
 --- !u!1 &2956146718983538862
 GameObject:
   m_ObjectHideFlags: 0

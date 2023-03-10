@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc8035e7c154358a4d193a3a2e8eb51, type: 3}
   m_Name: Resource (Tree)
   m_EditorClassIdentifier: 
-  type: 0
-  count: 4
+  resourceType: 0
+  resourceAmount: 4
+  respawnTime: 10
