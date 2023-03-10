@@ -17,12 +17,6 @@ namespace Lessons.AI.Lesson_Architecture
         private MoveAgent _moveAgent;
 
         [SerializeField]
-        private List<Vector3> _currentPath;
-
-        //[SerializeField]
-        //private WaypointsPath _pathPoints;
-
-        [SerializeField]
         private bool _isLooping;
 
         [SerializeField]
@@ -37,15 +31,10 @@ namespace Lessons.AI.Lesson_Architecture
         private IEnumerator<Vector3> _waypointIterator;
 
         [Button]
-        public void SetPath()
+        public void SetPath(List<Vector3> path)
         {            
-            //_currentPath = _pathPoints.GetPositionPoints();
-            _waypointIterator = _currentPath.GetEnumerator();
+            _waypointIterator = path.GetEnumerator();
             _waypointIterator.MoveNext();
-            foreach (var item in _currentPath)
-            {
-                Debug.Log($"{item}");
-            }
         }
 
         [Button]
@@ -54,7 +43,6 @@ namespace Lessons.AI.Lesson_Architecture
             _moveAgent.SetUnit(unit);
             _moveAgent.SetStoppingDistance(_stoppingDistance);
             _moveAgent.SetTargetPosition(_waypointIterator.Current);
-            Debug.Log($"{_waypointIterator.Current}");
         }        
 
         protected override void OnStart()
@@ -99,7 +87,7 @@ namespace Lessons.AI.Lesson_Architecture
             else if (!_waypointIterator.MoveNext() && _isLooping)
             {                
                 _waypointIterator.Reset();
-                SetPath();
+                _waypointIterator.MoveNext();
                 var nextPosition = _waypointIterator.Current;
                 _moveAgent.SetTargetPosition(nextPosition);
             }
