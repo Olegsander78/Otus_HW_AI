@@ -18,7 +18,7 @@ namespace Game.Gameplay.ResourceObjects
         [SerializeField]
         private Transform rootTransform;
         
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var coreModule = context.GetModule<CoreModule>();
             var configModule = context.GetModule<ConfigModule>(); 

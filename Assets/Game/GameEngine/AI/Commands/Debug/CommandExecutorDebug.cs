@@ -33,13 +33,13 @@ namespace Game.GameEngine.AI
             this.commandExecutor.Execute(HARVEST_RESOURCE, new CommandArgs_HarvestTarget(target));
         }
 
-        [Button]
-        [GUIColor(0, 1, 0)]
-        private void PatrolByPoints(Transform[] points)
-        {
-            var positions = points.Select(it => it.position).ToArray();
-            this.commandExecutor.Execute(PATROL_BY_POINTS, new CommandArgs_PatrolByPoints(positions));
-        }
+        //[Button]
+        //[GUIColor(0, 1, 0)]
+        //private void PatrolByPoints(Transform[] points)
+        //{
+        //    var positions = points.Select(it => it.position).ToArray();
+        //    this.commandExecutor.Execute(PATROL_BY_POINTS, new CommandArgs_PatrolByPoints(positions));
+        //}
 
         [Button]
         [GUIColor(0, 1, 0)]

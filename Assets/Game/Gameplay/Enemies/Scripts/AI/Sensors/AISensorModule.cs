@@ -12,7 +12,7 @@ namespace Game.Gameplay.Enemies
         [SerializeField]
         public CollidersSensorOverlapSphere sensor;
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var blackboardModule = context.GetModule<AIBlackboardModule>();
             var blackboard = blackboardModule.blackboard;

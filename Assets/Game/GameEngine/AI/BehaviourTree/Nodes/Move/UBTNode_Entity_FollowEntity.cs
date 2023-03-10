@@ -12,10 +12,6 @@ namespace Game.GameEngine.AI
         public IBlackboard Blackboard { private get; set; }
 
         [Space]
-        [SerializeField]
-        private FloatAdapter stoppingDistance; //0.15f
-
-        [Space]
         [BlackboardKey]
         [SerializeField]
         private string unitKey;
@@ -23,6 +19,10 @@ namespace Game.GameEngine.AI
         [BlackboardKey]
         [SerializeField]
         private string targetKey;
+
+        [BlackboardKey]
+        [SerializeField]
+        private string stoppingDistanceKey;
 
         private Agent_Entity_FollowEntity followAgent;
         
@@ -40,9 +40,16 @@ namespace Game.GameEngine.AI
                 return;
             }
 
+            if (!this.Blackboard.TryGetVariable(this.stoppingDistanceKey, out float stoppingDistance))
+            {
+                this.Return(false);
+                return;
+            }
+
             this.followAgent.OnTargetReached += this.OnTargetReached;
             this.followAgent.SetFollowingEntity(unit);
             this.followAgent.SetTargetEntity(target);
+            this.followAgent.SetStoppingDistance(stoppingDistance);
             this.followAgent.Play();
         }
 
@@ -57,7 +64,6 @@ namespace Game.GameEngine.AI
         private void Awake()
         {
             this.followAgent = new Agent_Entity_FollowEntity(coroutineDispatcher: this);
-            this.followAgent.SetStoppingDistance(this.stoppingDistance.Value);
         }
 
         protected override void OnEnd()

@@ -8,6 +8,6 @@ namespace Game.Gameplay.Player
     {
         [GameComponent(SERVICE)]
         [SerializeField]
-        private VendorSaleInteractor vendorInteractor = new();
+        private VendorInteractor vendorInteractor = new();
     }
 }

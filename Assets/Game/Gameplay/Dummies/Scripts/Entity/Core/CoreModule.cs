@@ -24,7 +24,7 @@ namespace Game.Gameplay.Dummies
         [SerializeField]
         public Emitter<DestroyArgs> destroyReceiver = new();
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             this.takeDamageEngine.Construct(this.hitPointsEngine, this.destroyReceiver);
 

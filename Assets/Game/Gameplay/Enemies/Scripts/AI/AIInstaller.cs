@@ -3,7 +3,6 @@ using AI.Iterators;
 using AI.Waypoints;
 using Elementary;
 using Entities;
-using Game.GameEngine;
 using Game.GameEngine.Mechanics;
 using GameSystem;
 using MonoOptimization;
@@ -29,9 +28,8 @@ namespace Game.Gameplay.Enemies
         [SerializeField]
         private IteratorMode waypointMode = IteratorMode.CIRCLE;
 
-        [Space]
         [SerializeField]
-        private MonoPolygon surfacePolygon;
+        private string surfacePolygonName = "WoodPolygon";
 
         public override void ConstructGame(IGameContext context)
         {
@@ -63,7 +61,8 @@ namespace Game.Gameplay.Enemies
         private void InstallSurface(Blackboard blackboard, ScriptableEnemyAI.BlackboardKeys blackboardKeys)
         {
             var key = blackboardKeys.surfaceKey;
-            blackboard.AddVariable(key, this.surfacePolygon);
+            var polygon = GameObject.Find(this.surfacePolygonName).GetComponent<MonoPolygon>();
+            blackboard.AddVariable(key, polygon);
         }
 
         private void InstallSensor(CollidersSensorOverlapSphere sensor)

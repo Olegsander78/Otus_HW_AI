@@ -20,9 +20,9 @@ namespace AI.Iterators
 
         protected int pointer;
 
-        public Iterator(T[] movePoints)
+        public Iterator(T[] moveItems)
         {
-            this.SetPoints(movePoints);
+            this.SetPoints(moveItems);
         }
 
         public Iterator()

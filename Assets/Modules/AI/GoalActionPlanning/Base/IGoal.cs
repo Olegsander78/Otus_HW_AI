@@ -7,5 +7,7 @@ namespace AI.GOAP
         Parameter[] DesiredState { get; }
 
         int EvaluatePriority();
+        
+        bool IsValid();
     }
 }

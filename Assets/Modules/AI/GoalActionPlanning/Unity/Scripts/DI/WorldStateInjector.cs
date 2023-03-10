@@ -1,16 +1,16 @@
 using UnityEngine;
 
-namespace AI.GOAP.Unity
+namespace AI.GOAP
 {
     [AddComponentMenu("AI/GOAP/World State Injector")]
     public sealed class WorldStateInjector : MonoBehaviour
     {
         [SerializeField]
-        private BaseWorldState worldState;
+        private UnityWorldState worldState;
 
         private void Awake()
         {
-            var injects = this.GetComponentsInChildren<IWorldStateInject>();
+            var injects = this.GetComponentsInChildren<IWorldStateInjective>();
             for (int i = 0, count = injects.Length; i < count; i++)
             {
                 var injection = injects[i];

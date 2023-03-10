@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18018606, g: 0.22559257, b: 0.30678663, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -176,7 +176,7 @@ MonoBehaviour:
   radius: 3
   layerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 0
   triggerInteraction: 1
 --- !u!114 &2844581
 MonoBehaviour:
@@ -198,6 +198,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 5513376045424181344
       type: {class: EnemyConditon, ns: Lessons.AI.Lesson_Architecture2, asm: Assets}
       data:

@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Game.GameEngine.AI
 {
-    public class Agent_Entity_FollowEntity : AgentCoroutine
+    public class Agent_Entity_FollowEntity : Agent_Coroutine
     {
         public event Action<bool> OnTargetReached
         {

@@ -20,7 +20,7 @@ namespace Game.Gameplay.Enemies
             yield return this.hitPointsViewAdapter;
         }
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var coreModule = context.GetModule<CoreModule>();
             this.hitPointsViewAdapter.Construct(coreModule.lifeModule.hitPointsEngine, this.hitPointsView);

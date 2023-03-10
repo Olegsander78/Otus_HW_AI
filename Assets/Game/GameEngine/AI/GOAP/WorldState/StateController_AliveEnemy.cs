@@ -2,7 +2,7 @@ using Entities;
 using Game.GameEngine;
 using Game.GameEngine.Mechanics;
 
-namespace AI.GOAP.Unity
+namespace AI.GOAP
 {
     public sealed class StateController_AliveEnemy : CoroutineStateController
     {

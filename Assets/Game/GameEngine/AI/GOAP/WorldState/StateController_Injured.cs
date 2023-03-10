@@ -3,7 +3,7 @@ using Game.GameEngine;
 using Game.GameEngine.Mechanics;
 using UnityEngine;
 
-namespace AI.GOAP.Unity
+namespace AI.GOAP
 {
     public sealed class StateController_Injured : MonoStateController
     {
@@ -32,14 +32,14 @@ namespace AI.GOAP.Unity
             this.component.OnHitPointsChanged -= this.OnHitPointsChanged;
         }
 
-        private bool IsInjured()
-        {
-            return this.component.HitPoints < this.maxHitPoints;
-        }
-
         private void OnHitPointsChanged(int hitPoints)
         {
             this.worldState.ChangeParameter(this.stateName, this.IsInjured());
+        }
+
+        private bool IsInjured()
+        {
+            return this.component.HitPoints < this.maxHitPoints;
         }
     }
 }

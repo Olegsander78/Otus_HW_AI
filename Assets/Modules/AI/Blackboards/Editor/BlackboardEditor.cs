@@ -1,6 +1,7 @@
 #if UNITY_EDITOR
 using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -8,7 +9,7 @@ using Object = UnityEngine.Object;
 namespace AI.Blackboards.UnityEditor
 {
     [CustomEditor(typeof(UnityBlackboard))]
-    public sealed class BlackboardEditor : Editor
+    public sealed class BlackboardEditor : OdinEditor
     {
         private UnityBlackboard blackboard;
 
@@ -28,6 +29,9 @@ namespace AI.Blackboards.UnityEditor
             }
 
             GUI.enabled = true;
+            
+            EditorGUILayout.Space(8);
+            base.OnInspectorGUI();
         }
 
         private void DrawVariable(KeyValuePair<string, object> variable)

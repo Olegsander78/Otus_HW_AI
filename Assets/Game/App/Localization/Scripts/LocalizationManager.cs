@@ -1,4 +1,5 @@
 using System;
+using Game.App;
 using LocalizationModule;
 using UnityEngine;
 
@@ -38,6 +39,11 @@ namespace Game.Localization
             throw new Exception("Localization Manager doesn't exist");
         }
 
+        public static string GetCurrentText(string key)
+        {
+            return GetText(key, LanguageManager.CurrentLanguage);
+        }
+
         public static Sprite GetSprite(string key, SystemLanguage language)
         {
             if (IsActive)
@@ -48,6 +54,11 @@ namespace Game.Localization
             throw new Exception("Localization Manager doesn't exist");
         }
 
+        public static Sprite GetCurrentSprite(string key)
+        {
+            return GetSprite(key, LanguageManager.CurrentLanguage);
+        }
+
         public static AudioClip GetAudioClip(string key, SystemLanguage language)
         {
             if (IsActive)
@@ -56,6 +67,11 @@ namespace Game.Localization
             }
 
             throw new Exception("Localization Manager doesn't exist");
+        }
+
+        public static AudioClip GetCurrentAudioClip(string key)
+        {
+            return GetAudioClip(key, LanguageManager.CurrentLanguage);
         }
 
         private void Awake()

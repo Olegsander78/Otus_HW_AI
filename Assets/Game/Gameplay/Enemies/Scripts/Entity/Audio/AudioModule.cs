@@ -14,7 +14,7 @@ namespace Game.Gameplay.Enemies
         [SerializeField]
         private AudioClip deathSound;
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var coreModule = context.GetModule<CoreModule>();
             coreModule.lifeModule.destroyEmitter.AddListener(new Action_AudioSource_PlayOneShot(

@@ -5,6 +5,7 @@ namespace AI.BTree
 {
     public abstract class UnityBehaviourNode : MonoBehaviour, IBehaviourNode
     {
+        [ShowInInspector, ReadOnly]
         public bool IsRunning { get; private set; }
 
         private IBehaviourCallback callback;

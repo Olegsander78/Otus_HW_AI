@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Game.GameEngine.AI
 {
-    public class Agent_Entity_MoveByPoints : Agent_MoveByPath<Vector3>
+    public sealed class Agent_Entity_MoveByPoints : Agent_MoveByPoints<Vector3>
     {
         private IComponent_MoveInDirection moveComponent;
 

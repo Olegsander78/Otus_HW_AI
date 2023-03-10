@@ -17,7 +17,7 @@ namespace Game.Gameplay.Conveyors
             yield return this.infoViewAdapter;
         }
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var coreModule = context.GetModule<CoreModule>();
             this.infoViewAdapter.Construct(coreModule.workTimer, this.infoView);

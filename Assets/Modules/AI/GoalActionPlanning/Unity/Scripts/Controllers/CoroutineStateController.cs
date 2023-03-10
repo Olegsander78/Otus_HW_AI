@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace AI.GOAP.Unity
+namespace AI.GOAP
 {
     public abstract class CoroutineStateController : MonoStateController
     {

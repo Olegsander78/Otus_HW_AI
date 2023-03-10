@@ -10,7 +10,7 @@ namespace Game.Gameplay
         [SerializeField]
         private ConveyorTrigger[] triggers;
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var entity = context.GetModule<ComponentsModule>().entity;
             for (int i = 0, count = this.triggers.Length; i < count; i++)

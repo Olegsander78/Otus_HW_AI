@@ -13,9 +13,9 @@ namespace Game.Meta
         [ShowInInspector]
         private ProductBuyer productBuyer = new();
 
-        [GameComponent(ELEMENT)]
-        [Space, ReadOnly, ShowInInspector]
-        private BuyProductAnalyticsTrackerV1 analyticsTracker = new();
+        //[GameComponent(ELEMENT)]
+        //[Space, ReadOnly, ShowInInspector]
+        //private BuyProductAnalyticsTrackerV1 analyticsTracker = new();
 
         public override void ConstructGame(IGameContext context)
         {

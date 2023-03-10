@@ -1,16 +1,16 @@
 using UnityEngine;
 
-namespace AI.GOAP.Unity
+namespace AI.GOAP
 {
-    public abstract class MonoStateController : MonoBehaviour, IWorldStateInject
+    public abstract class MonoStateController : MonoBehaviour, IWorldStateInjective
     {
-        [StateName]
+        [ParameterKey]
         [SerializeField]
         protected string stateName;
 
         protected IWorldState worldState { get; private set; }
 
-        IWorldState IWorldStateInject.WorldState
+        IWorldState IWorldStateInjective.WorldState
         {
             set { this.InjectWorldState(value); }
         }

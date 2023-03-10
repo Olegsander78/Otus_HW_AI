@@ -32,13 +32,10 @@ namespace Game.Gameplay.Conveyors
             yield return this.workMechanics;
         }
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             this.ConstructWorkMechanics();
-            
-            var configModule = context.GetModule<ConfigModule>();
-            var config = configModule.conveyourConfig;
-            this.ConstructFromConfig(config);
+            this.ConstructFromConfig(context);
         }
 
         private void ConstructWorkMechanics()
@@ -51,11 +48,15 @@ namespace Game.Gameplay.Conveyors
             );
         }
 
-        private void ConstructFromConfig(ScriptableConveyour config)
+        private void ConstructFromConfig(MonoContextModular context)
         {
+            var module = context.GetModule<ConfigModule>();
+            var config = module.conveyourConfig;
+        
             this.loadStorage.MaxValue = config.inputCapacity;
             this.unloadStorage.MaxValue = config.outputCapacity;
             this.workTimer.Duration = config.workTime;
+            this.workTimer.CoroutineDispatcher = this;
         }
     }
 }

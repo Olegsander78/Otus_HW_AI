@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace AI.Blackboards
@@ -55,6 +56,8 @@ namespace AI.Blackboards
             return (T) result;
         }
 
+        [Title("Methods")]
+        [Button]
         public void AddVariable(string key, object value)
         {
             if (this.variables.ContainsKey(key))
@@ -66,6 +69,7 @@ namespace AI.Blackboards
             this.OnVariableAdded?.Invoke(key, value);
         }
 
+        [Button]
         public void ChangeVariable(string key, object value)
         {
             if (!this.variables.ContainsKey(key))
@@ -77,6 +81,7 @@ namespace AI.Blackboards
             this.OnVariableChanged?.Invoke(key, value);
         }
 
+        [Button]
         public void RemoveVariable(string key)
         {
             if (this.variables.TryGetValue(key, out var value))
@@ -86,6 +91,7 @@ namespace AI.Blackboards
             }
         }
 
+        [Button]
         public void Clear()
         {
             foreach (var (key, value) in this.variables)

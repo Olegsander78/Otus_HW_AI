@@ -15,7 +15,7 @@ namespace Game.Gameplay.Vendors
         [SerializeField]
         private Transform particlePosition;
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var configModule = context.GetModule<ConfigModule>();
             var vendorConfig = configModule.vendorConfig;

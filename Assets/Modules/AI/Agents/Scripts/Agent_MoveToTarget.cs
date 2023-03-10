@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace AI.Agents
 {
-    public abstract class Agent_MoveToTarget<T> : AgentCoroutine
+    public abstract class Agent_MoveToTarget<T> : Agent_Coroutine
     {
         public event Action<bool> OnTargetReached;
 
@@ -16,8 +16,10 @@ namespace AI.Agents
 
         private bool isTargetReached;
 
-        public Agent_MoveToTarget(MonoBehaviour coroutineDispatcher, YieldInstruction framePeriod) :
-            base(coroutineDispatcher, framePeriod)
+        public Agent_MoveToTarget(
+            MonoBehaviour coroutineDispatcher,
+            YieldInstruction framePeriod
+        ) : base(coroutineDispatcher, framePeriod)
         {
         }
 

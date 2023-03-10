@@ -17,9 +17,7 @@ namespace AI.Agents
             get { return this.MoveAgent.IsPathFinished; }
         }
 
-        protected abstract Agent_MoveByPath<Vector3> MoveAgent { get; }
-
-        protected abstract Vector3 CurrentPosition { get; }
+        protected abstract Agent_MoveByPoints<Vector3> MoveAgent { get; }
 
         private readonly NavMeshPath currentPath;
 
@@ -37,7 +35,7 @@ namespace AI.Agents
 
         public void SetTargetPosition(Vector3 targetPosition)
         {
-            if (NavMesh.CalculatePath(this.CurrentPosition, targetPosition, this.navMeshAreas, this.currentPath))
+            if (NavMesh.CalculatePath(this.EvaluateCurrentPosition(), targetPosition, this.navMeshAreas, this.currentPath))
             {
                 this.MoveAgent.SetPath(this.currentPath.corners);
             }
@@ -56,5 +54,7 @@ namespace AI.Agents
         {
             this.MoveAgent.Stop();
         }
+
+        protected abstract Vector3 EvaluateCurrentPosition();
     }
 }

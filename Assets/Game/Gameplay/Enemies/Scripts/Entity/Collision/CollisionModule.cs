@@ -13,7 +13,7 @@ namespace Game.Gameplay.Enemies
         [SerializeField]
         private Collider[] colliders;
         
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var coreModule = context.GetModule<CoreModule>();
             coreModule.enableVariable.AddListener(this.rootGameObject.SetActiveByAction());

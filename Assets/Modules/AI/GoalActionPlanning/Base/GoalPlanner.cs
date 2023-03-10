@@ -14,17 +14,25 @@ namespace AI.GOAP
 
         public bool MakePlan(out Plan plan)
         {
-            var goals = this.provider
-                .ProvideGoals()
+            IWorldState worldState = this.provider
+                .ProvideWorldState();
+
+            IGoal[] goals = this.provider
+                .ProvideAllGoals()
+                .Where(it => it.IsValid() &&
+                             worldState.ContainsParameters(it.DesiredState)
+                )
                 .OrderByDescending(it => it.EvaluatePriority())
                 .ToArray();
 
-            var actions = this.provider
-                .ProvideActions()
+            IAction[] actions = this.provider
+                .ProvideAllActions()
+                .Where(it => it.IsValid() &&
+                             worldState.ContainsParameters(it.RequiredState) &&
+                             worldState.ContainsParameters(it.SatisfiedState)
+                )
                 .ToArray();
 
-            var worldState = this.provider
-                .ProvideWorldState();
 
             for (int i = 0, count = goals.Length; i < count; i++)
             {
@@ -43,9 +51,9 @@ namespace AI.GOAP
         {
             IWorldState ProvideWorldState();
 
-            IEnumerable<IGoal> ProvideGoals();
+            IEnumerable<IGoal> ProvideAllGoals();
 
-            IEnumerable<IAction> ProvideActions();
+            IEnumerable<IAction> ProvideAllActions();
         }
     }
 }

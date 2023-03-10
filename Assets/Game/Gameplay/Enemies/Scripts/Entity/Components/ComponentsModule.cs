@@ -16,7 +16,7 @@ namespace Game.Gameplay.Enemies
         [SerializeField]
         private Transform movingPivot;
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var coreModule = context.GetModule<CoreModule>();
             this.entity.AddRange(

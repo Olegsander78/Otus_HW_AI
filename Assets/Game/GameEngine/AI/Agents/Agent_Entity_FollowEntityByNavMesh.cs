@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Game.GameEngine.AI
 {
-    public class Agent_Entity_FollowEntityByNavMesh : Agent_FollowTargetByNavMesh
+    public sealed class Agent_Entity_FollowEntityByNavMesh : Agent_FollowTargetByNavMesh
     {
         protected override Agent_MoveToTarget<Vector3> MoveAgent
         {

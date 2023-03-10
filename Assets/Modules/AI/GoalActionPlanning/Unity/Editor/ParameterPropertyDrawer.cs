@@ -22,7 +22,7 @@ namespace AI.GOAP.UnityEditor
             
             
             var name = field.name;
-            var names = ParameterNamesConfig.GetNames();
+            var names = ParameterKeysConfig.GetKeys();
             
             if (string.IsNullOrEmpty(name))
             {

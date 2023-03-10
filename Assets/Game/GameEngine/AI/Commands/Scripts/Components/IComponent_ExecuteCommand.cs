@@ -4,10 +4,10 @@ namespace Game.GameEngine.AI
     {
         bool IsRunning { get; }
         
-        void Execute(CommandType type, object args = null);
+        void Execute<T>(T args);
 
-        void ExecuteForce(CommandType type, object args = null);
+        void ExecuteForce<T>(T args);
 
-        void Cancel();
+        void Interrupt();
     }
 }

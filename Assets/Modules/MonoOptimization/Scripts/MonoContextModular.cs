@@ -70,7 +70,7 @@ namespace MonoOptimization
             for (var i = 0; i < count; i++)
             {
                 var module = this.modules[i];
-                module.ConstructSensor(this);
+                module.Construct(this);
             }
         }
     }

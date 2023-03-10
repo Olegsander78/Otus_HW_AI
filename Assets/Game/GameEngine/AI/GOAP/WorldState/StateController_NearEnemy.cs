@@ -3,7 +3,7 @@ using Game.GameEngine;
 using Game.GameEngine.Mechanics;
 using UnityEngine;
 
-namespace AI.GOAP.Unity
+namespace AI.GOAP
 {
     public sealed class StateController_NearEnemy : CoroutineStateController
     {

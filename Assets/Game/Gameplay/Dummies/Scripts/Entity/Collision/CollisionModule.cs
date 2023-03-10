@@ -10,7 +10,7 @@ namespace Game.Gameplay.Dummies
         [SerializeField]
         private GameObject root;
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var coreModule = context.GetModule<CoreModule>();
             coreModule.destroyReceiver.AddListener(this.root.SetActiveFalseByAction());

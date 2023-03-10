@@ -13,7 +13,7 @@ namespace Game.Gameplay.Vendors
         [SerializeField]
         public VendorVisual vendorVisual = new();
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             this.vendorVisual.Animator = this.vendorAnimator;
         }

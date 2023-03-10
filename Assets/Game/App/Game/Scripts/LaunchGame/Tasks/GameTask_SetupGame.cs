@@ -20,7 +20,6 @@ namespace Game.App
         {
             var gameContext = GameObject.FindObjectOfType<MonoGameContext>();
             this.gameManager.SetupGame(gameContext);
-            this.gameManager.ConstructGame();
             callback?.Invoke(LoadingResult.Success());
         }
     }

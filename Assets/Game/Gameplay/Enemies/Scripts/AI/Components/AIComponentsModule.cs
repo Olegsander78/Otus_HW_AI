@@ -11,7 +11,7 @@ namespace Game.Gameplay.Enemies
         [SerializeField]
         private UnityEntity entity;
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var coreModule = context.GetModule<AICoreModule>();
             this.entity.Add(new Component_Enable(coreModule.enableVariable));

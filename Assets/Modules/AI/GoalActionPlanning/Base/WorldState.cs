@@ -8,13 +8,22 @@ namespace AI.GOAP
     public sealed class WorldState : IWorldState
     {
         public event Action<Parameter> OnParameterChanged;
-        
+
         public event Action<Parameter> OnParameterAdded;
-        
+
         public event Action<Parameter> OnParameterRemoved;
 
         [SerializeField]
         private List<Parameter> fields;
+
+        public WorldState()
+        {
+        }
+
+        public WorldState(IEnumerable<Parameter> parameters)
+        {
+            this.fields = new List<Parameter>(parameters);
+        }
 
         public void ChangeParameter(string name, bool value)
         {
@@ -29,7 +38,7 @@ namespace AI.GOAP
                     return;
                 }
             }
-            
+
             throw new Exception($"Value {name} is not found");
         }
 
@@ -76,7 +85,7 @@ namespace AI.GOAP
 
             throw new Exception($"Field {name} is not found");
         }
-        
+
         public Parameter[] GetAllParameters()
         {
             return this.fields.ToArray();

@@ -10,7 +10,7 @@ namespace Game.Gameplay.ResourceObjects
         [SerializeField]
         private Collider[] colliders;
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var coreModule = context.GetModule<CoreModule>();
             coreModule.lifeModule.activeVariable.AddListener(this.colliders.EnabledByAction());

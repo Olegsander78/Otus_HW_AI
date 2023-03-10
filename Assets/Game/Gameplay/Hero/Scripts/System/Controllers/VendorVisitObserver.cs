@@ -11,7 +11,7 @@ namespace Game.Gameplay.Hero
     [Serializable]
     public sealed class VendorVisitObserver : TriggerVisitor<IEntity>
     {
-        private VendorSaleInteractor vendorInteractor;
+        private VendorInteractor vendorInteractor;
 
         [SerializeField]
         private ScriptableEntityCondition vendorCondition;
@@ -24,7 +24,7 @@ namespace Game.Gameplay.Hero
         }
 
         [GameInject]
-        public void Construct(VendorSaleInteractor vendorInteractor)
+        public void Construct(VendorInteractor vendorInteractor)
         {
             this.vendorInteractor = vendorInteractor;
         }
@@ -41,7 +41,7 @@ namespace Game.Gameplay.Hero
 
         protected override void OnHeroVisit(IEntity entity)
         {
-            this.vendorInteractor.SaleResources(entity);
+            this.vendorInteractor.SellResources(entity);
         }
     }
 }

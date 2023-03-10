@@ -48,7 +48,6 @@ namespace Lessons.AI.Lesson_BehaviourTree1
             }
 
             this.isRunning = false;
-            Debug.Log($"RETURN NODE: {name}: {success}");
             var callback = this.callback;
             if (callback != null)
             {

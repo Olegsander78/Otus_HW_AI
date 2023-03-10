@@ -1,7 +1,7 @@
 using Entities;
 using UnityEngine;
 
-namespace AI.GOAP.Unity
+namespace AI.GOAP
 {
     public sealed class StateObserver_Enemy : MonoBehaviour
     {

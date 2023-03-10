@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Game.GameEngine.AI
 {
-    public class Agent_Entity_MoveToPosition : Agent_MoveToTarget<Vector3>
+    public sealed class Agent_Entity_MoveToPosition : Agent_MoveToTarget<Vector3>
     {
         private IComponent_MoveInDirection moveComponent;
 

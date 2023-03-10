@@ -6,9 +6,7 @@ namespace Game.Gameplay.Hero
 {
     public sealed class HeroService : IHeroService
     {
-        [PropertySpace]
-        [ReadOnly]
-        [ShowInInspector]
+        [ShowInInspector, ReadOnly, Space]
         private IEntity currentHero;
 
         public void SetupHero(IEntity hero)

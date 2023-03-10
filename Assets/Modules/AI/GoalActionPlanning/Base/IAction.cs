@@ -9,5 +9,7 @@ namespace AI.GOAP
         Parameter[] SatisfiedState { get; }
 
         int EvaluateCost();
+
+        bool IsValid();
     }
 }

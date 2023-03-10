@@ -12,9 +12,9 @@ namespace Game.Gameplay.ResourceObjects
         [SerializeField]
         private Animator animator;
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
-            base.ConstructSensor(context);
+            base.Construct(context);
 
             var core = context.GetModule<CoreModule>();
             core.takeHitEvent.AddListener(new Action_Animator_Play

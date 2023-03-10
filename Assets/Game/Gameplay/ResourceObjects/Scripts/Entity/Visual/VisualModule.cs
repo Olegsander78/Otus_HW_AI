@@ -10,7 +10,7 @@ namespace Game.Gameplay.ResourceObjects
         [SerializeField]
         private GameObject rootGameObject;
     
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var coreModule = context.GetModule<CoreModule>();
             coreModule.lifeModule.activeVariable.AddListener(rootGameObject.SetActiveByAction());

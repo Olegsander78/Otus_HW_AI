@@ -2,7 +2,7 @@ namespace AI.Iterators
 {
     public sealed class CircleIterator<T> : Iterator<T>
     {
-        public CircleIterator(T[] points) : base(points)
+        public CircleIterator(T[] items) : base(items)
         {
         }
 

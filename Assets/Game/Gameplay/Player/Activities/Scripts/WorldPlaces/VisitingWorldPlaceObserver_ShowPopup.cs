@@ -6,9 +6,14 @@ namespace Game.Gameplay.Player
 {
     public class VisitingWorldPlaceObserver_ShowPopup : VisitingWorldPlaceObserver
     {
+        public PopupName PopupName
+        {
+            get { return this.popupName; }
+        }
+
         [SerializeField]
         private PopupName popupName;
-        
+
         private PopupManager popupManager;
 
         public override void ConstructGame(IGameContext context)

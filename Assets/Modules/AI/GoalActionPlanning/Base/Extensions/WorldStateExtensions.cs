@@ -2,7 +2,7 @@ namespace AI.GOAP
 {
     public static class WorldStateExtensions
     {
-        public static bool ContainsAllNames(this IWorldState it, Parameter[] parameters)
+        public static bool ContainsParameters(this IWorldState it, Parameter[] parameters)
         {
             for (int i = 0, count = parameters.Length; i < count; i++)
             {
@@ -16,7 +16,7 @@ namespace AI.GOAP
             return true;
         }
         
-        public static bool MatchesAllValues(this IWorldState worldState, Parameter[] parameters)
+        public static bool MatchesWithParameters(this IWorldState worldState, Parameter[] parameters)
         {
             for (int i = 0, count = parameters.Length; i < count; i++)
             {

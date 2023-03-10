@@ -12,14 +12,14 @@ namespace AI.Iterators
                 return new CircleIterator<T>(points);
             }
 
-            if (mode == IteratorMode.FORWARD_BACK)
+            if (mode == IteratorMode.YOYO)
             {
-                return new ForwardbackIterator<T>(points);
+                return new YoyoIterator<T>(points);
             }
 
-            if (mode == IteratorMode.ROAD)
+            if (mode == IteratorMode.ONCE)
             {
-                return new RoadIterator<T>(points);
+                return new OnceIterator<T>(points);
             }
 
             throw new Exception($"Iterator {mode} is not found!");

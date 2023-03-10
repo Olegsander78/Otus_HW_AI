@@ -20,7 +20,7 @@ namespace Game.Gameplay.Dummies
             yield return this.hitPointsViewAdapter;
         }
 
-        public override void ConstructSensor(MonoContextModular context)
+        public override void Construct(MonoContextModular context)
         {
             var core = context.GetModule<CoreModule>();
             this.hitPointsViewAdapter.Construct(core.hitPointsEngine, this.hitPointsView);

@@ -1,33 +1,35 @@
-using Sirenix.OdinInspector;
-using UnityEngine;
+using System;
+using AI.Commands;
 
 namespace Game.GameEngine.AI
 {
-    public sealed class Component_ExecuteCommand : MonoBehaviour, IComponent_ExecuteCommand
+    public sealed class Component_ExecuteCommand : IComponent_ExecuteCommand
     {
         public bool IsRunning
         {
-            get { return this.executor; }
+            get { return this.executor.IsRunning; }
         }
 
-        [SerializeField]
-        private CommandExecutor executor;
+        private readonly ICommandExecutor<Type> executor;
 
-        [Button]
-        public void Execute(CommandType type, object args = null)
+        public Component_ExecuteCommand(ICommandExecutor<Type> executor)
         {
-            this.executor.Execute(type, args);
+            this.executor = executor;
         }
 
-        [Button]
-        public void ExecuteForce(CommandType type, object args = null)
+        public void Execute<T>(T args)
         {
-            this.executor.ExecuteForce(type, args);
+            this.executor.Execute(args);
         }
 
-        public void Cancel()
+        public void ExecuteForce<T>(T args)
         {
-            this.executor.Cancel();
+            this.executor.ExecuteForce(args);
+        }
+
+        public void Interrupt()
+        {
+            this.executor.Interrupt();
         }
     }
 }

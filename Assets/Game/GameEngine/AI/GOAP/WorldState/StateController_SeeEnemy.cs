@@ -1,4 +1,4 @@
-namespace AI.GOAP.Unity
+namespace AI.GOAP
 {
     public sealed class StateController_SeeEnemy : MonoStateController
     {
